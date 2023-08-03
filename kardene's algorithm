@@ -1,0 +1,28 @@
+// kardene's algorithm
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int a[] = {2,-4,5,3,-3,6,7};
+        int subsum = subsum(a);
+        System.out.println(subsum);
+        
+    }
+    public static int subsum(int a[])
+    {
+        int maxsum = 0;
+        int currsum = 0;
+        for(int i =0;i<a.length;i++)
+        {
+            currsum = currsum +a [i];
+            if(currsum >maxsum)
+            {
+                maxsum = currsum ;
+            }
+            else if(currsum <0)
+            {
+                currsum = 0;
+            }
+        }
+        return maxsum;
+    }
+}
